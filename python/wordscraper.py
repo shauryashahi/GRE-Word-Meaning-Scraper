@@ -30,11 +30,12 @@ def word(url,c,conn):
 		meanings = r.cssselect('td')[1]
 		meaning = meanings.text_content().strip()
 		word = x.text_content().strip()
-		print word,'is added to your database.'
 		data = (word, meaning)
 		c.execute('insert into vocab values (? ,?)' , data)
 		conn.commit()
+		print word,'is added to your database.'		
 if __name__ == '__main__':
+	#You should have already initialised an sqlite database, with appropriate schema.
 	conn = sqlite3.connect('./database.db')
 	c = conn.cursor()
 	getpage(c,conn)
