@@ -18,7 +18,7 @@ def word(url,c,conn):
 		x = r.cssselect('td')[0]
 		if x.text_content().strip()[0] == 'B':
 			continue
-		#There were some words which had some characters out of UTF-8 encoding, and couldn't be parsed...so we skip them
+		#There were some words which had some characters out of Unicode, and couldn't be parsed...so we skip them
 		if x.text_content().strip() == 'bitter':
 			continue
 		if x.text_content().strip() == 'dominate':
