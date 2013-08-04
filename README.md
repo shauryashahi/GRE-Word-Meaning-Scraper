@@ -1,5 +1,7 @@
-useful-scripts
-==============
+Vocabulator - GRE Words Scraper
+===============================
 
-Some of the scripts that I tend to use more frequently.
+This python script needs lxml.html library installed on your device.
+http://lxml.de/lxmlhtml.html
 
+All the Words and Meanings are scraped from wordhacker.com > Barron GRE List
